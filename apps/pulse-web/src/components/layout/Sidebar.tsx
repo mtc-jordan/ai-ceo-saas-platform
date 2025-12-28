@@ -1,11 +1,20 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useAuthStore } from '../../store/authStore';
 
 // Enhanced Sidebar with Modern Design
 export default function Sidebar() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, logout } = useAuthStore();
   const [collapsed, setCollapsed] = useState(false);
   const [expandedSections, setExpandedSections] = useState<string[]>(['pulse', 'meetings']);
+  const [showUserMenu, setShowUserMenu] = useState(false);
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>
@@ -143,6 +152,18 @@ export default function Sidebar() {
     { label: 'Localization', path: '/app/localization', icon: '🌐' },
   ];
 
+  // Get user initials
+  const getUserInitials = () => {
+    if (user?.full_name) {
+      const names = user.full_name.split(' ');
+      return names.map(n => n[0]).join('').toUpperCase().slice(0, 2);
+    }
+    if (user?.email) {
+      return user.email[0].toUpperCase();
+    }
+    return 'U';
+  };
+
   return (
     <aside className={`fixed left-0 top-0 h-screen bg-slate-950 border-r border-slate-800 transition-all duration-300 z-40 ${
       collapsed ? 'w-20' : 'w-64'
@@ -264,22 +285,82 @@ export default function Sidebar() {
         )}
       </nav>
 
-      {/* User Profile */}
+      {/* User Profile with Sign Out */}
       <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-800 bg-slate-950">
-        <div className={`flex items-center ${collapsed ? 'justify-center' : 'space-x-3'}`}>
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-            <span className="text-white font-medium">JD</span>
-          </div>
-          {!collapsed && (
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-white truncate">John Doe</p>
-              <p className="text-xs text-slate-500 truncate">CEO • Acme Corp</p>
+        <div className="relative">
+          <button
+            onClick={() => setShowUserMenu(!showUserMenu)}
+            className={`w-full flex items-center ${collapsed ? 'justify-center' : 'space-x-3'} p-2 rounded-lg hover:bg-slate-800/50 transition-colors`}
+          >
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-medium">{getUserInitials()}</span>
             </div>
-          )}
-          {!collapsed && (
-            <button className="p-2 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white">
-              ⚙️
-            </button>
+            {!collapsed && (
+              <>
+                <div className="flex-1 min-w-0 text-left">
+                  <p className="text-sm font-medium text-white truncate">
+                    {user?.full_name || 'User'}
+                  </p>
+                  <p className="text-xs text-slate-500 truncate">
+                    {user?.email || 'user@example.com'}
+                  </p>
+                </div>
+                <span className="text-slate-400">▼</span>
+              </>
+            )}
+          </button>
+
+          {/* User Dropdown Menu */}
+          {showUserMenu && (
+            <div className={`absolute bottom-full left-0 right-0 mb-2 bg-slate-900 border border-slate-700 rounded-lg shadow-xl overflow-hidden ${
+              collapsed ? 'w-48 left-full ml-2 bottom-0' : ''
+            }`}>
+              <div className="p-3 border-b border-slate-700">
+                <p className="text-sm font-medium text-white">{user?.full_name || 'User'}</p>
+                <p className="text-xs text-slate-400">{user?.email || 'user@example.com'}</p>
+                {user?.is_platform_admin && (
+                  <span className="inline-block mt-1 px-2 py-0.5 bg-purple-500/20 text-purple-400 text-xs rounded-full">
+                    Admin
+                  </span>
+                )}
+              </div>
+              <div className="py-1">
+                <Link
+                  to="/app/settings"
+                  onClick={() => setShowUserMenu(false)}
+                  className="flex items-center space-x-2 px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
+                >
+                  <span>⚙️</span>
+                  <span>Settings</span>
+                </Link>
+                <Link
+                  to="/app/billing"
+                  onClick={() => setShowUserMenu(false)}
+                  className="flex items-center space-x-2 px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
+                >
+                  <span>💳</span>
+                  <span>Billing</span>
+                </Link>
+                {user?.is_platform_admin && (
+                  <Link
+                    to="/super-admin"
+                    onClick={() => setShowUserMenu(false)}
+                    className="flex items-center space-x-2 px-4 py-2 text-sm text-purple-400 hover:bg-slate-800 hover:text-purple-300 transition-colors"
+                  >
+                    <span>🛡️</span>
+                    <span>Super Admin</span>
+                  </Link>
+                )}
+                <div className="border-t border-slate-700 my-1"></div>
+                <button
+                  onClick={handleLogout}
+                  className="w-full flex items-center space-x-2 px-4 py-2 text-sm text-red-400 hover:bg-red-500/10 hover:text-red-300 transition-colors"
+                >
+                  <span>🚪</span>
+                  <span>Sign Out</span>
+                </button>
+              </div>
+            </div>
           )}
         </div>
       </div>
