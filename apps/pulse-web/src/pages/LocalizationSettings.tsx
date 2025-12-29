@@ -3,8 +3,8 @@ import {
   GlobeIcon,
   LanguagesIcon,
   DollarSignIcon,
-  ClockIcon,
-  CheckCircleIcon,
+  
+  
   SparklesIcon,
   ArrowRightIcon,
   RefreshCwIcon

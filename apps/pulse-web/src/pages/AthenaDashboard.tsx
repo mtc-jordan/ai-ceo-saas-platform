@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // Enhanced Athena Strategic Intelligence Dashboard
 export default function AthenaDashboard() {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [_activeTab, _setActiveTab] = useState('overview');
 
   // Strategic metrics
   const strategicMetrics = [

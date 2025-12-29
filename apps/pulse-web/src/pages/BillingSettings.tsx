@@ -45,10 +45,10 @@ interface PaymentMethod {
 export default function BillingSettings() {
   const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState('overview');
-  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+  const [_showUpgradeModal, _setShowUpgradeModal] = useState(false);
   const [showCancelModal, setShowCancelModal] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState('');
+  const [_selectedPlan, _setSelectedPlan] = useState('');
   const [billingInterval, setBillingInterval] = useState<'monthly' | 'yearly'>('monthly');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');

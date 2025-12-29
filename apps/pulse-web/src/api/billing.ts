@@ -47,12 +47,12 @@ interface PaymentMethod {
   is_default: boolean;
 }
 
-interface CheckoutSession {
+interface _CheckoutSession {
   session_id: string;
   checkout_url: string;
 }
 
-interface BillingPortal {
+interface _BillingPortal {
   portal_url: string;
 }
 

@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   BellIcon,
   DevicePhoneMobileIcon,
   EnvelopeIcon,
   SpeakerWaveIcon,
-  ClockIcon,
+  
   MoonIcon,
-  GlobeAltIcon,
+  
   BeakerIcon,
 } from '@heroicons/react/24/outline';
 

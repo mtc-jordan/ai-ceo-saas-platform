@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // Enhanced GovernAI Board Governance Dashboard
 export default function GovernAIDashboard() {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [_activeTab, _setActiveTab] = useState('overview');
 
   // Governance metrics
   const governanceMetrics = [

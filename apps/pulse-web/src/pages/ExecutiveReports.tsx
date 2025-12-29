@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   DocumentTextIcon,
   CalendarIcon,
@@ -10,10 +10,10 @@ import {
   TrashIcon,
   PencilIcon,
   SparklesIcon,
-  ChartBarIcon,
+  
   DocumentArrowDownIcon,
-  Cog6ToothIcon,
-  CheckCircleIcon,
+  
+  
   XCircleIcon
 } from '@heroicons/react/24/outline';
 

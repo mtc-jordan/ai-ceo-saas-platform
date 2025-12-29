@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   getActionItems,
-  createActionItem,
+  
   updateActionItem,
   deleteActionItem,
   type ActionItem,
@@ -192,7 +192,8 @@ const MeetingActionItems: React.FC = () => {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  // @ts-ignore
+const _getStatusColor = (status: string) => {
     switch (status) {
       case 'completed':
         return 'bg-green-100 text-green-800';

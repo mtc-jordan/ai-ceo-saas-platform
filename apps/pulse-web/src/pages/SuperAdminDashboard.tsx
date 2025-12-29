@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // Enhanced Super Admin Dashboard for NovaVerse SaaS Platform - Owner/Admin View
@@ -7,7 +7,7 @@ export default function SuperAdminDashboard() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedPeriod, setSelectedPeriod] = useState('30d');
   const [showAddUserModal, setShowAddUserModal] = useState(false);
-  const [showSubscriptionModal, setShowSubscriptionModal] = useState(false);
+  const [_showSubscriptionModal, setShowSubscriptionModal] = useState(false);
 
   // Comprehensive stats for owner dashboard
   const stats = {

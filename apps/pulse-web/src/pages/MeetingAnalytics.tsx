@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   ClockIcon,
   ChatBubbleLeftRightIcon,
@@ -7,7 +7,7 @@ import {
   ChartBarIcon,
   LightBulbIcon,
   ExclamationTriangleIcon,
-  ArrowTrendingUpIcon,
+  
   ArrowTrendingDownIcon,
   SparklesIcon
 } from '@heroicons/react/24/outline';

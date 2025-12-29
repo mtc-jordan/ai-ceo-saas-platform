@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // Enhanced Workflow Automation Dashboard
 export default function WorkflowDashboard() {
   const [activeTab, setActiveTab] = useState('workflows');
-  const [showCreateModal, setShowCreateModal] = useState(false);
+  const [_showCreateModal, setShowCreateModal] = useState(false);
 
   // Statistics
   const stats = [

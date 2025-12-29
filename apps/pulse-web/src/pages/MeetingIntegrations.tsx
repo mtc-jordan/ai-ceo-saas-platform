@@ -100,7 +100,7 @@ const MeetingIntegrations: React.FC = () => {
   const handleConnect = async (platformId: string) => {
     try {
       setConnecting(platformId);
-      const { auth_url } = await getIntegrationAuthUrl(platformId);
+      const { auth_url: _auth_url } = await getIntegrationAuthUrl(platformId);
       // In production, redirect to OAuth URL
       // window.location.href = auth_url;
       

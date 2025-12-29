@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import {
-  TargetIcon,
+  
   ChevronDownIcon,
   ChevronRightIcon,
   BuildingIcon,
   UsersIcon,
   UserIcon,
   AlertTriangleIcon,
-  CheckCircleIcon,
+  
   LinkIcon
 } from 'lucide-react';
 

@@ -84,7 +84,7 @@ export default function DataSources() {
 
   return (
     <div>
-      <Header title="Data Sources" />
+      <Header />
 
       <div className="p-6">
         <div className="flex justify-between items-center mb-6">

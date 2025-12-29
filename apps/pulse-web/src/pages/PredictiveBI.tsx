@@ -178,7 +178,7 @@ export default function PredictiveBI() {
                         {/* Bar */}
                         <div
                           className={`w-full ${data.actual ? 'bg-green-500/30' : 'bg-indigo-500/30'} rounded-b`}
-                          style={{ height: `${(data.predicted || data.actual) * 50}px` }}
+                          style={{ height: `${((data.predicted || data.actual || 0) * 50)}px` }}
                         ></div>
                         <span className="text-xs text-slate-500 mt-2">{data.month}</span>
                       </div>

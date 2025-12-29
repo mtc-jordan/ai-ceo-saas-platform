@@ -8,8 +8,7 @@ import {
   AlertCircleIcon,
   CopyIcon,
   ExternalLinkIcon,
-  ShieldCheckIcon,
-  RefreshCwIcon
+  ShieldCheckIcon
 } from 'lucide-react';
 
 // Mock data
@@ -300,6 +299,7 @@ const WhiteLabelSettings: React.FC = () => {
                         id: domains.length + 1,
                         domain: newDomain,
                         ssl_enabled: false,
+                        ssl_expiry: '',
                         dns_verified: false,
                         is_active: false,
                         is_primary: false
