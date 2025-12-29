@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import GlobalSearch from '../GlobalSearch';
 import { useAuthStore } from '../../store/authStore';
 
 // Enhanced Header with Modern Design
@@ -44,7 +45,22 @@ export default function Header() {
     { label: 'Add Goal', icon: '🎯', action: () => navigate('/app/okr/goals/new') },
   ];
 
+  // Keyboard shortcut for search (Cmd+K or Ctrl+K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setShowSearch(true);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   return (
+    <>
+      {/* Global Search Modal */}
+      <GlobalSearch isOpen={showSearch} onClose={() => setShowSearch(false)} />
     <header className="fixed top-0 right-0 left-64 h-16 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800 z-30">
       <div className="h-full px-6 flex items-center justify-between">
         {/* Left Section - Breadcrumb & Search */}
@@ -268,5 +284,6 @@ export default function Header() {
         />
       )}
     </header>
+    </>
   );
 }

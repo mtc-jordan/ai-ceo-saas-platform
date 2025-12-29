@@ -63,6 +63,10 @@ import ScheduledTasks from './pages/ScheduledTasks';
 import BillingSettings from './pages/BillingSettings';
 // Super Admin Dashboard
 import SuperAdminDashboard from './pages/SuperAdminDashboard';
+// Auth pages
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
+import Onboarding from './pages/Onboarding';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -190,6 +194,16 @@ function AppContent() {
           <AuthRoute>
             <Register />
           </AuthRoute>
+        }
+      />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
+      <Route
+        path="/onboarding"
+        element={
+          <ProtectedRoute>
+            <Onboarding />
+          </ProtectedRoute>
         }
       />
 
