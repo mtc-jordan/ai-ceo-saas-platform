@@ -240,6 +240,7 @@ function AppContent() {
         <Route path="athena/competitors" element={<Competitors />} />
         <Route path="athena/competitors/new" element={<Competitors />} />
         <Route path="athena/intelligence" element={<MarketIntelligence />} />
+        <Route path="athena/market" element={<MarketIntelligence />} />
         <Route path="athena/intelligence/new" element={<MarketIntelligence />} />
         <Route path="athena/recommendations" element={<MarketIntelligence />} />
         <Route path="athena/summaries" element={<AthenaDashboard />} />
