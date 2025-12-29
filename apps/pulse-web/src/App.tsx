@@ -66,6 +66,7 @@ import SuperAdminDashboard from './pages/SuperAdminDashboard';
 // Auth pages
 import ForgotPassword from './pages/ForgotPassword';
 import PulseAIDashboard from './pages/PulseAIDashboard';
+import Briefings from './pages/Briefings';
 import ResetPassword from './pages/ResetPassword';
 import Onboarding from './pages/Onboarding';
 
@@ -228,7 +229,7 @@ function AppContent() {
         
         {/* Nova Pulse Routes */}
         <Route path="pulse" element={<PulseAIDashboard />} />
-        <Route path="pulse/briefings" element={<PulseAIDashboard />} />
+        <Route path="pulse/briefings" element={<Briefings />} />
         <Route path="pulse/data-sources" element={<DataSources />} />
         <Route path="pulse/ask" element={<PulseAIDashboard />} />
         
