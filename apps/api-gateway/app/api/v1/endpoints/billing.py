@@ -1,7 +1,4 @@
-"""
-Billing API Endpoints for AI CEO SaaS Platform
-Handles subscription management, payments, and billing operations
-"""
+"""\nBilling API Endpoints for NovaVerse Platform\nHandles subscription management, payments, and billing operations\nIntegrated with Stripe for payment processing\n"""
 from fastapi import APIRouter, HTTPException, Depends, Request, Header
 from pydantic import BaseModel
 from typing import Optional, List
@@ -15,33 +12,33 @@ router = APIRouter()
 stripe.api_key = os.getenv("STRIPE_SECRET_KEY", "sk_test_placeholder")
 STRIPE_WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET", "whsec_placeholder")
 
-# Plan configuration
+# NovaVerse Plan configuration
 PLANS = {
-    "starter": {
-        "name": "Starter",
-        "monthly_price": 99,
-        "yearly_price": 948,  # $79/month
-        "stripe_monthly_price_id": "price_starter_monthly",
-        "stripe_yearly_price_id": "price_starter_yearly",
-        "features": ["Up to 10 users", "Basic Analytics", "Email Support", "5 AI Queries/day"],
-        "limits": {"users": 10, "ai_queries": 5, "storage_gb": 10}
+    "explorer": {
+        "name": "Explorer",
+        "monthly_price": 49,
+        "yearly_price": 470,  # 2 months free
+        "stripe_monthly_price_id": "price_explorer_monthly",
+        "stripe_yearly_price_id": "price_explorer_yearly",
+        "features": ["Nova Pulse Dashboard", "Basic AI Insights", "5 Team Members", "Email Support", "1 Data Source"],
+        "limits": {"users": 5, "ai_queries": 50, "storage_gb": 5}
     },
-    "professional": {
-        "name": "Professional",
-        "monthly_price": 299,
-        "yearly_price": 2988,  # $249/month
-        "stripe_monthly_price_id": "price_professional_monthly",
-        "stripe_yearly_price_id": "price_professional_yearly",
-        "features": ["Up to 50 users", "Advanced Analytics", "Priority Support", "Unlimited AI", "API Access"],
-        "limits": {"users": 50, "ai_queries": -1, "storage_gb": 100}
+    "voyager": {
+        "name": "Voyager",
+        "monthly_price": 149,
+        "yearly_price": 1430,  # 2 months free
+        "stripe_monthly_price_id": "price_voyager_monthly",
+        "stripe_yearly_price_id": "price_voyager_yearly",
+        "features": ["All Explorer features", "Nova Mind Strategic AI", "Nova Shield Governance", "25 Team Members", "Priority Support", "10 Data Sources", "Custom Reports"],
+        "limits": {"users": 25, "ai_queries": -1, "storage_gb": 50}
     },
     "enterprise": {
         "name": "Enterprise",
-        "monthly_price": 999,
-        "yearly_price": 9588,  # $799/month
+        "monthly_price": 499,
+        "yearly_price": 4790,  # 2 months free
         "stripe_monthly_price_id": "price_enterprise_monthly",
         "stripe_yearly_price_id": "price_enterprise_yearly",
-        "features": ["Unlimited users", "Full Platform", "Dedicated Support", "Custom Integrations", "SLA"],
+        "features": ["All Voyager features", "Nova Forge Process Optimization", "Unlimited Team Members", "Dedicated Account Manager", "Unlimited Data Sources", "White-Label Options", "API Access", "SSO/SAML", "Custom Integrations"],
         "limits": {"users": -1, "ai_queries": -1, "storage_gb": -1}
     }
 }
@@ -84,7 +81,7 @@ class AddPaymentMethodRequest(BaseModel):
 MOCK_SUBSCRIPTION = {
     "id": "sub_demo123",
     "status": "active",
-    "plan": "professional",
+    "plan": "voyager",
     "billing_interval": "monthly",
     "current_period_start": "2024-12-01",
     "current_period_end": "2025-01-01",

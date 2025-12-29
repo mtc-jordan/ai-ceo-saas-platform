@@ -10,41 +10,41 @@ export default function BillingSettings() {
 
   // Current subscription data
   const subscription = {
-    plan: 'professional',
-    planName: 'Professional',
+    plan: 'voyager',
+    planName: 'Voyager',
     status: 'active',
     billingInterval: 'monthly',
-    amount: 299,
+    amount: 149,
     currentPeriodStart: '2024-12-01',
     currentPeriodEnd: '2025-01-01',
     cancelAtPeriodEnd: false,
     trialEnd: null
   };
 
-  // Available plans
+  // NovaVerse subscription plans
   const plans = [
     {
-      id: 'starter',
-      name: 'Starter',
-      monthlyPrice: 99,
-      yearlyPrice: 79,
-      features: ['Up to 10 users', 'Basic Analytics', 'Email Support', '5 AI Queries/day', 'Basic Reports'],
+      id: 'explorer',
+      name: 'Explorer',
+      monthlyPrice: 49,
+      yearlyPrice: 39,
+      features: ['Nova Pulse Dashboard', 'Basic AI Insights', '5 Team Members', 'Email Support', '1 Data Source'],
       popular: false
     },
     {
-      id: 'professional',
-      name: 'Professional',
-      monthlyPrice: 299,
-      yearlyPrice: 249,
-      features: ['Up to 50 users', 'Advanced Analytics', 'Priority Support', 'Unlimited AI Queries', 'Custom Reports', 'API Access'],
+      id: 'voyager',
+      name: 'Voyager',
+      monthlyPrice: 149,
+      yearlyPrice: 119,
+      features: ['All Explorer features', 'Nova Mind Strategic AI', 'Nova Shield Governance', '25 Team Members', 'Priority Support', '10 Data Sources', 'Custom Reports'],
       popular: true
     },
     {
       id: 'enterprise',
       name: 'Enterprise',
-      monthlyPrice: 999,
-      yearlyPrice: 799,
-      features: ['Unlimited users', 'Full Platform Access', 'Dedicated Support', 'Custom Integrations', 'SLA Guarantee', 'White-Label Options'],
+      monthlyPrice: 499,
+      yearlyPrice: 399,
+      features: ['All Voyager features', 'Nova Forge Process Optimization', 'Unlimited Team Members', 'Dedicated Account Manager', 'Unlimited Data Sources', 'White-Label Options', 'API Access', 'SSO/SAML'],
       popular: false
     }
   ];
