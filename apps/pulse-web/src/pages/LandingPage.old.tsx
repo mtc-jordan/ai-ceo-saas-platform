@@ -48,7 +48,7 @@ const LandingPage: React.FC = () => {
 
   const testimonials = [
     {
-      quote: "AI CEO transformed how we make strategic decisions. The daily briefings save me hours every week.",
+      quote: "NovaVerse transformed how we make strategic decisions. The daily briefings save me hours every week.",
       author: "Sarah Chen",
       role: "CEO, TechStart Inc.",
       avatar: "SC"
@@ -86,7 +86,7 @@ const LandingPage: React.FC = () => {
               <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
                 <span className="text-white font-bold text-xl">✦</span>
               </div>
-              <span className="text-xl font-bold text-white">AI CEO</span>
+              <span className="text-xl font-bold text-white">NovaVerse</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-slate-300 hover:text-white transition-colors">Features</a>
@@ -386,7 +386,7 @@ const LandingPage: React.FC = () => {
               Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-slate-400">
-              See what executives are saying about AI CEO
+              See what executives are saying about NovaVerse
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -419,7 +419,7 @@ const LandingPage: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              Join thousands of executives making smarter decisions with AI CEO.
+              Join thousands of executives making smarter decisions with NovaVerse.
             </p>
             <button
               onClick={() => navigate('/register')}
@@ -441,7 +441,7 @@ const LandingPage: React.FC = () => {
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
                   <span className="text-white font-bold text-xl">✦</span>
                 </div>
-                <span className="text-xl font-bold text-white">AI CEO</span>
+                <span className="text-xl font-bold text-white">NovaVerse</span>
               </div>
               <p className="text-slate-400 text-sm">
                 AI-powered executive intelligence for modern businesses.
@@ -475,7 +475,7 @@ const LandingPage: React.FC = () => {
             </div>
           </div>
           <div className="border-t border-slate-700/50 mt-12 pt-8 text-center text-slate-400 text-sm">
-            <p>&copy; 2024 AI CEO. All rights reserved.</p>
+            <p>&copy; 2024 NovaVerse. All rights reserved.</p>
           </div>
         </div>
       </footer>

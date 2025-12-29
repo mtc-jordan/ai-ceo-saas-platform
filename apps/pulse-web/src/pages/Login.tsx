@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Sparkles } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Input from '../components/ui/Input';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../components/ui/Card';
@@ -43,13 +42,11 @@ export default function Login() {
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 text-white">
-            <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
-              <Sparkles className="h-7 w-7" />
-            </div>
-            <span className="text-3xl font-bold">Pulse AI</span>
+          <div className="inline-flex items-center gap-3 text-white">
+            <img src="/novaverse-logo.png" alt="NovaVerse" className="w-12 h-12 object-contain" />
+            <span className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">NovaVerse</span>
           </div>
-          <p className="text-slate-400 mt-2">AI-Powered Executive Dashboard</p>
+          <p className="text-slate-400 mt-2">AI-Powered Business Platform</p>
         </div>
 
         <Card>

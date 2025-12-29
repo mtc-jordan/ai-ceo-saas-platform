@@ -122,11 +122,9 @@ const Pricing: React.FC = () => {
       <header className="border-b border-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <a href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">✦</span>
-              </div>
-              <span className="text-xl font-bold text-white">AI CEO</span>
+            <a href="/" className="flex items-center space-x-3">
+              <img src="/novaverse-logo.png" alt="NovaVerse" className="w-10 h-10 object-contain" />
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">NovaVerse</span>
             </a>
             <div className="flex items-center space-x-4">
               {isAuthenticated ? (
@@ -197,7 +195,7 @@ const Pricing: React.FC = () => {
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 hover:border-slate-600 transition-all">
             <div className="mb-6">
               <h3 className="text-xl font-semibold text-white mb-2">{plans?.free.name}</h3>
-              <p className="text-slate-400 text-sm">Perfect for trying out AI CEO</p>
+              <p className="text-slate-400 text-sm">Perfect for trying out NovaVerse</p>
             </div>
             <div className="mb-6">
               <span className="text-4xl font-bold text-white">$0</span>
@@ -312,7 +310,7 @@ const Pricing: React.FC = () => {
       {/* Footer */}
       <footer className="border-t border-slate-700/50 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400">
-          <p>&copy; 2024 AI CEO. All rights reserved.</p>
+          <p>&copy; 2024 NovaVerse. All rights reserved.</p>
         </div>
       </footer>
     </div>

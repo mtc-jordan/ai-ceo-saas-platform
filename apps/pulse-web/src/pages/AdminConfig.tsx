@@ -46,7 +46,7 @@ export default function AdminConfig() {
       console.error('Failed to load configs:', error);
       // Demo data
       setConfigs([
-        { id: 1, key: 'app_name', value: 'AI CEO Platform', value_type: 'string', category: 'general', description: 'Application name', is_secret: false, updated_at: '' },
+        { id: 1, key: 'app_name', value: 'NovaVerse Platform', value_type: 'string', category: 'general', description: 'Application name', is_secret: false, updated_at: '' },
         { id: 2, key: 'support_email', value: 'support@aiceo.com', value_type: 'string', category: 'general', description: 'Support email address', is_secret: false, updated_at: '' },
         { id: 3, key: 'max_team_members_free', value: '3', value_type: 'number', category: 'limits', description: 'Max team members for free plan', is_secret: false, updated_at: '' },
         { id: 4, key: 'max_team_members_pro', value: '10', value_type: 'number', category: 'limits', description: 'Max team members for pro plan', is_secret: false, updated_at: '' },

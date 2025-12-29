@@ -249,7 +249,7 @@ const WhiteLabelSettings: React.FC = () => {
                   className="w-4 h-4 text-indigo-600 rounded"
                 />
                 <label htmlFor="showPoweredBy" className="text-sm text-gray-700">
-                  Show "Powered by AI CEO" badge
+                  Show "Powered by NovaVerse" badge
                 </label>
               </div>
             </div>

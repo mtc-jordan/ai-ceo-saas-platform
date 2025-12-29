@@ -172,18 +172,14 @@ export default function Sidebar() {
       <div className="h-16 flex items-center justify-between px-4 border-b border-slate-800">
         {!collapsed && (
           <Link to="/app/dashboard" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">AI</span>
-            </div>
-            <span className="font-bold text-lg bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              CEO Platform
+            <img src="/novaverse-logo.png" alt="NovaVerse" className="w-8 h-8 object-contain" />
+            <span className="font-bold text-lg bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              NovaVerse
             </span>
           </Link>
         )}
         {collapsed && (
-          <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto">
-            <span className="text-white font-bold text-sm">AI</span>
-          </div>
+          <img src="/novaverse-logo.png" alt="NovaVerse" className="w-10 h-10 object-contain mx-auto" />
         )}
         <button
           onClick={() => setCollapsed(!collapsed)}

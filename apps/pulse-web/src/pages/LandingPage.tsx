@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 
-// Modern Landing Page for AI CEO SaaS Platform - Redesigned 2025
+// Modern Landing Page for NovaVerse SaaS Platform - Redesigned 2025
 export default function LandingPageNew() {
   const navigate = useNavigate();
   const { isAuthenticated } = useAuthStore();
@@ -72,7 +72,7 @@ export default function LandingPageNew() {
 
   const testimonials = [
     {
-      quote: "AI CEO has transformed how we run our executive team. The insights are invaluable and the time savings are incredible.",
+      quote: "NovaVerse has transformed how we run our executive team. The insights are invaluable and the time savings are incredible.",
       author: "Sarah Chen",
       role: "CEO, TechVentures Inc.",
       avatar: "SC",
@@ -209,11 +209,9 @@ export default function LandingPageNew() {
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/25">
-                <span className="text-xl font-bold">AI</span>
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">AI CEO</span>
+            <div className="flex items-center space-x-3">
+              <img src="/novaverse-logo.png" alt="NovaVerse" className="w-10 h-10 object-contain" />
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">NovaVerse</span>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
@@ -295,7 +293,7 @@ export default function LandingPageNew() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-6">
-              The AI-Powered Platform for{' '}
+              The AI-Powered Business Platform for{' '}
               <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Modern Executives
               </span>
@@ -344,7 +342,7 @@ export default function LandingPageNew() {
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <div className="flex-1 text-center text-sm text-slate-500">AI CEO Executive Dashboard</div>
+                  <div className="flex-1 text-center text-sm text-slate-500">NovaVerse Executive Dashboard</div>
                 </div>
                 <div className="p-4 sm:p-6">
                   {/* Dashboard mockup */}
@@ -505,7 +503,7 @@ export default function LandingPageNew() {
               </span>
             </h2>
             <p className="text-lg text-slate-400">
-              See what executives are saying about AI CEO.
+              See what executives are saying about NovaVerse.
             </p>
           </div>
 
@@ -675,7 +673,7 @@ export default function LandingPageNew() {
                 Ready to Transform Your Executive Operations?
               </h2>
               <p className="text-lg sm:text-xl text-indigo-100 mb-10 max-w-2xl mx-auto">
-                Join thousands of leaders who are making smarter decisions with AI CEO.
+                Join thousands of leaders who are making smarter decisions with NovaVerse.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <button
@@ -701,11 +699,9 @@ export default function LandingPageNew() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
             <div className="col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center">
-                  <span className="text-xl font-bold">AI</span>
-                </div>
-                <span className="text-xl font-bold">AI CEO</span>
+              <div className="flex items-center space-x-3 mb-4">
+                <img src="/novaverse-logo.png" alt="NovaVerse" className="w-10 h-10 object-contain" />
+                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">NovaVerse</span>
               </div>
               <p className="text-slate-400 text-sm mb-6 max-w-sm">
                 The AI-powered platform for modern executives. Make better decisions, faster.
@@ -739,7 +735,7 @@ export default function LandingPageNew() {
 
           <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-slate-500 text-sm">
-              © 2024 AI CEO. All rights reserved.
+              © 2024 NovaVerse. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm">
               <a href="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
