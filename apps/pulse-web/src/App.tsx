@@ -65,6 +65,7 @@ import BillingSettings from './pages/BillingSettings';
 import SuperAdminDashboard from './pages/SuperAdminDashboard';
 // Auth pages
 import ForgotPassword from './pages/ForgotPassword';
+import PulseAIDashboard from './pages/PulseAIDashboard';
 import ResetPassword from './pages/ResetPassword';
 import Onboarding from './pages/Onboarding';
 
@@ -224,6 +225,12 @@ function AppContent() {
         <Route path="alerts" element={<Dashboard />} />
         <Route path="settings" element={<Settings />} />
         <Route path="team" element={<Team />} />
+        
+        {/* Nova Pulse Routes */}
+        <Route path="pulse" element={<PulseAIDashboard />} />
+        <Route path="pulse/briefings" element={<PulseAIDashboard />} />
+        <Route path="pulse/data-sources" element={<DataSources />} />
+        <Route path="pulse/ask" element={<PulseAIDashboard />} />
         
         {/* Athena Routes */}
         <Route path="athena" element={<AthenaDashboard />} />
