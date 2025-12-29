@@ -36,8 +36,8 @@ export default function Sidebar() {
     },
     {
       id: 'pulse',
-      label: 'Pulse AI',
-      icon: '⚡',
+      label: 'Nova Pulse',
+      icon: '💫',
       items: [
         { label: 'Overview', path: '/app/pulse', icon: '📊' },
         { label: 'Briefings', path: '/app/pulse/briefings', icon: '📋' },
@@ -47,8 +47,8 @@ export default function Sidebar() {
     },
     {
       id: 'athena',
-      label: 'Athena',
-      icon: '🦉',
+      label: 'Nova Mind',
+      icon: '🧠',
       items: [
         { label: 'Overview', path: '/app/athena', icon: '📈' },
         { label: 'Scenarios', path: '/app/athena/scenarios', icon: '🎯' },
@@ -58,8 +58,8 @@ export default function Sidebar() {
     },
     {
       id: 'governai',
-      label: 'GovernAI',
-      icon: '⚖️',
+      label: 'Nova Shield',
+      icon: '🛡️',
       items: [
         { label: 'Overview', path: '/app/governai', icon: '📊' },
         { label: 'Board Meetings', path: '/app/governai/meetings', icon: '👥' },
@@ -70,8 +70,8 @@ export default function Sidebar() {
     },
     {
       id: 'lean',
-      label: 'Lean Six Sigma',
-      icon: '📐',
+      label: 'Nova Forge',
+      icon: '⚙️',
       items: [
         { label: 'Overview', path: '/app/lean', icon: '📊' },
         { label: 'DMAIC Projects', path: '/app/lean/dmaic', icon: '🔄' },

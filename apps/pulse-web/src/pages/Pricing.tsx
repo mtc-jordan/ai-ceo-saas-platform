@@ -48,14 +48,14 @@ const Pricing: React.FC = () => {
           name: 'Pro',
           price_monthly: 99,
           price_yearly: 990,
-          features: ['5 Users', 'Full Pulse AI Dashboard', 'Unlimited Data Sources', 'Real-time Briefings', 'Athena Strategic Planning', 'Scenario Analysis', 'Competitor Tracking', 'Priority Support'],
+          features: ['5 Users', 'Full Nova Pulse Dashboard', 'Unlimited Data Sources', 'Real-time Briefings', 'Nova Mind Strategic Planning', 'Scenario Analysis', 'Competitor Tracking', 'Priority Support'],
           limits: { users: 5, data_sources: -1, scenarios: 20, competitors: 50, ai_queries: 500 }
         },
         enterprise: {
           name: 'Enterprise',
           price_monthly: 499,
           price_yearly: 4990,
-          features: ['Unlimited Users', 'Full Platform Access', 'Pulse AI + Athena + GovernAI', 'Custom Integrations', 'Board Intelligence', 'ESG Reporting', 'Investment Analysis', 'Dedicated Account Manager', 'SLA Guarantee', 'Custom AI Training'],
+          features: ['Unlimited Users', 'Full Platform Access', 'Nova Pulse + Nova Mind + Nova Shield', 'Custom Integrations', 'Board Intelligence', 'ESG Reporting', 'Investment Analysis', 'Dedicated Account Manager', 'SLA Guarantee', 'Custom AI Training'],
           limits: { users: -1, data_sources: -1, scenarios: -1, competitors: -1, ai_queries: -1 }
         }
       });

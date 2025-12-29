@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-// Enhanced Pulse AI Dashboard
+// Enhanced Nova Pulse Dashboard
 export default function PulseAIDashboard() {
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
   const [askAIQuery, setAskAIQuery] = useState('');
@@ -77,7 +77,7 @@ export default function PulseAIDashboard() {
           <div>
             <h1 className="text-3xl font-bold mb-1 flex items-center space-x-3">
               <span className="text-4xl">⚡</span>
-              <span>Pulse AI</span>
+              <span>Nova Pulse</span>
             </h1>
             <p className="text-slate-400">Your AI-powered executive intelligence assistant</p>
           </div>
